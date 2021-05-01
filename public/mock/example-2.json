@@ -1,0 +1,42 @@
+{
+  "id": "x",
+  "left": {
+    "id": "y",
+    "left": {
+      "id": "y5"
+    },
+    "right": {
+      "id": "y6",
+      "left": {
+        "id": "y56"
+      },
+      "right": {
+        "id": "y57"
+      }
+    }
+  },
+  "right": {
+    "id": "z",
+    "left": {
+      "id": "z7",
+      "left": {
+        "id": "z59",
+        "left": {
+          "id": "z62"
+        }
+      },
+      "right": {
+        "id": "z8",
+        "right": {
+          "id": "z145"
+        }
+      }
+    },
+    "right": {
+      "id": "z9",
+      "right": {
+        "id": "z146"
+      }
+    }
+  }
+}
