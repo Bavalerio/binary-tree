@@ -1,5 +1,4 @@
 import MuiLinearProgress from '@material-ui/core/LinearProgress';
-import React from 'react';
 import { styled } from '@material-ui/core/styles';
 
 export interface LoaderProps {
@@ -11,13 +10,13 @@ const LinearProgress = styled(MuiLinearProgress)({
     width: '100%',
   },
   '&.MuiLinearProgress-colorPrimary': {
-    backgroundColor: 'var(--primary-color)',
+    backgroundColor: '#FF9900',
   },
   '& .MuiLinearProgress-barColorPrimary': {
-    backgroundColor: 'var(--primary-color-variant)',
+    backgroundColor: '#D0021B',
   },
   '& .MuiLinearProgress-bar2Indeterminate': {
-    backgroundColor: 'var(--primary-color-variant)',
+    backgroundColor: '#D0021B',
   },
 });
 

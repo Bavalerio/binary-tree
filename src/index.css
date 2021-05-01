@@ -12,41 +12,11 @@ code {
     monospace;
 }
 
-.header {
-  position: relative;
-  padding-top: 2em;
-  padding-bottom: 1em;
-  font-size: 2em;
-  color: red;
-}
-
-.input {
-  position: relative;
-  width: 22em;
-  height: 2em;
-  margin-bottom: 2em;
-}
-
-.button {
-  position: flex;
-  background-color: tomato;
-  margin-left: 2em;
-  font-weight: 2em;
-  width: 5em;
-  height: 2em;
-}
-
 body {
   margin: 1em 1em;
 }
-.output-container {
-  /* position: absolute;
-  margin-left: 19em;
-  width: 56em;
-  height: 250px;
-  padding: 1em;
-  border: 1em solid black; */
-}
+
+/* Styles for HTML tree */
 
 .oddNode {
   border-style: solid;
@@ -65,18 +35,12 @@ body {
   border-width: 1px;
 }
 
-.box-orange {
-  background: orange;
-  height: 100px;
-  width: 100px;
-  top: 100px;
-  left: 100px;
-}
-
-.box-blue {
-  background: lightskyblue;
-  height: 100px;
-  width: 100px;
+.deepest-tree {
+  border-style: solid;
+  min-width: 20px;
+  min-height: 20px;
+  border-color: green;
+  border-width: 2px;
 }
 
 .empty-box {
@@ -89,6 +53,47 @@ td {
   vertical-align: top;
 }
 
-.error-message {
-  color: red;
+/* Styles for react-graph-tree */
+
+.node circle {
+  fill: rgb(247, 106, 214);
+  stroke: rgb(184, 37, 81);
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: black;
+  fill: black;
+}
+
+.node {
+  cursor: pointer;
+}
+
+path.link {
+  fill: none;
+  stroke: #2593b8;
+  stroke-width: 1.5px;
+}
+
+.green {
+  fill: none;
+  stroke: green;
+  stroke-dasharray: 5;
+  stroke-width: 2px;
+}
+
+.purple {
+  fill: none;
+  stroke: purple;
+  stroke-width: 1.5px;
+}
+
+.file-loader {
+  display: grid;
+  grid: auto-flow min-content / repeat(12, 1fr);
+  grid-gap: 1em;
+  margin: 1em;
 }

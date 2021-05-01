@@ -1,4 +1,12 @@
-import React, { useState } from 'react';
+import {
+  Button,
+  TextField,
+  Theme,
+  createStyles,
+  makeStyles,
+} from '@material-ui/core';
+
+import React from 'react';
 
 interface TextAreaProps {
   value?: string;
@@ -11,7 +19,30 @@ export const TextArea: React.FC<TextAreaProps> = ({
   updateTree,
   setNodeText,
 }) => {
-  // const [nodeText, setNodeText] = useState<string>(value || '');
+  const useStyles = makeStyles((theme: Theme) =>
+    createStyles({
+      root: {
+        display: 'flex',
+        justifyContent: 'center',
+        marginBottom: '20px',
+      },
+      textField: {
+        position: 'relative',
+        minWidth: '50%',
+        justifyContent: 'center',
+        marginBottom: '20px',
+        marginLeft: '8px',
+      },
+      botton: {
+        position: 'relative',
+        width: '80px',
+        height: '40px',
+        marginLeft: '6px',
+      },
+    }),
+  );
+
+  const classes = useStyles();
 
   function processTree() {
     if (updateTree) {
@@ -25,14 +56,27 @@ export const TextArea: React.FC<TextAreaProps> = ({
   }
 
   return (
-    <div>
-      <textarea
-        rows={5}
-        cols={120}
-        value={value}
+    <div className={classes.root}>
+      <TextField
+        className={classes.textField}
         onChange={handleNodeTextChange}
-      ></textarea>
-      <button className="button" onClick={processTree}>{`Process`}</button>
+        value={value}
+        id="json-content"
+        label="Parsed as JSON"
+        multiline
+        rows={8}
+        defaultValue=""
+        variant="outlined"
+      />
+
+      <Button
+        className={classes.botton}
+        variant="contained"
+        color="primary"
+        onClick={processTree}
+      >
+        Process
+      </Button>
     </div>
   );
 };
